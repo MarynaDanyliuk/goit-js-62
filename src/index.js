@@ -97,8 +97,12 @@ switch (stars) {
 
 console.log(price);
 
-const option = 1526;
+// 1. назначить переменные
+
+const option = 1;
 let message = "";
+
+//  2. Записать свитч выбора опции
 
 switch (option) {
   case 1:
@@ -117,11 +121,13 @@ switch (option) {
     message = "Вам перезвонит менеджер";
 }
 
+// 3. Сделать лог месседж
+
 console.log(message);
 
 // Цыклы. Цыкл for
 
-for (let i = 0; i < 5; i += 1) {
+for (let i = 10; i < 20; i += 1) {
   console.log(i);
 }
 
@@ -130,3 +136,51 @@ console.log("jsdjs");
 console.log("jsdjs");
 
 console.log("jsdjs");
+
+// Цикл for
+// Общая сумма зарплаты работникам, которая генерится случайными числами от 500 до 5000
+// Перемненная зп totalSalary, переменная по работникам employees. Принимаем количество работников произвольное - 4 например
+// 1. назначаем переменнные
+const employees = 4;
+let totalSalary = 0;
+// если нет работников тотал салари принимем равным нулю, поскольку эта пременная будет меняться, принимаем ее через let
+const minSalary = 500;
+const maxSalary = 5000;
+
+for (let i = 1; i < 5; i += 1) {
+  const salary = Math.round(
+    Math.random() * (maxSalary - minSalary) + minSalary
+  );
+  console.log(`ЗП работника номер ${i} - ${salary}`);
+
+  totalSalary += salary;
+}
+
+console.log("totalSalary: ", totalSalary);
+
+// скрипт подсчета суммы всех четных чисел в диапазоне от min до max
+const min = 6;
+const max = 13;
+let total = 0;
+
+for (let i = min; i <= max; i += 1) {
+  console.log(i);
+  if (i % 2 === 0) {
+    console.log("четное: ", i);
+  }
+}
+
+const x = Math.round(Math.random() * 100 + 1); // 1-100
+let userInput;
+
+do {
+  userInput = Number(promt("Enter a numb (1-100)"));
+
+  if (x > userInput) {
+    console.log("x >", userInput);
+  } else if (x < userInput) {
+    console.log("x <", userInput);
+  }
+} while (x !== userInput);
+
+console.log("You won!");
