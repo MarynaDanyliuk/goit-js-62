@@ -345,3 +345,218 @@ function getCommonElements(array1, array2) {
 }
 
 console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]));
+
+// // _______________________________________-
+// function calculateTotalPrice(order) {
+//   let total = 0;
+
+//   for (const number of order) {
+//     total += number;
+//   }
+
+//   return total;
+// }
+
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+
+// _________________________________________-
+
+function getEvenNumbers(start, end) {
+  // const numbers = [3, 4, 5, 6, 7, 8, 9, 10, 11];
+  const numbers = [];
+  const array = [];
+
+  let number;
+  numbers[0] = start;
+
+  for (i = start; i <= end - 1; i += 1) {
+    number = numbers.push((start += 1));
+  }
+
+  console.log(numbers);
+
+  for (let i = 0; i <= numbers.length; i += 1) {
+    if (numbers[i] % 2 === 0) {
+      array.push(numbers[i]);
+    }
+  }
+  return array;
+}
+
+console.log(getEvenNumbers(3, 11));
+
+// __________________________________
+
+function includes(array, value) {
+  let message;
+
+  for (let number of array) {
+    // number === value ? "true" : "false";
+    if (number === value) {
+      message = "true";
+      return message;
+    }
+    message = "false";
+  }
+  return message;
+}
+
+console.log(includes([1, 2, 3, 4, 5], 3));
+console.log(includes([("apple", "plum", "pear", "orange")], "plum"));
+console.log(
+  includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus")
+);
+console.log(
+  includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter")
+);
+
+// for (let i = 0; i <= array.length; i += 1) {
+//   const number = array[i];
+//   if (number === value) {
+//     // return number;
+//   }
+//   return false;
+// }
+
+// // _________________________________________
+const apartment = {
+  imgUrl: "https://via.placeholder.com/640x480",
+  descr: "Spacious apartment in the city center",
+  rating: 4.7,
+  price: 5000,
+  tags: ["premium", "promoted", "top", "trusted"],
+  owner: {
+    name: "Henry Sibola",
+    phone: "982-126-1588",
+    email: "henry.carter@aptmail.com",
+  },
+};
+
+// Change code below this line
+// apartment.area = 60;
+// apartment.rooms = 3;
+// apartment.location = { country: "Jamaica", city: "Kingston" };
+
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+// const keys = [];
+// const values = [];
+// // Change code below this line
+
+// for (const key in apartment) {
+//   keys.push(key);
+//   values.push(apartment[key]);
+// }
+// console.log(values);
+// console.log(keys);
+
+function countProps(object) {
+  let propCount = 0;
+  let props = [];
+
+  for (const prop in object) {
+    if (object.hasOwnProperty(prop)) {
+      // console.log(prop);
+      props.push(prop);
+      // propCount += Number(prop);
+      // keys.push(key);
+      // values.push(apartment[key]);
+    }
+  }
+  // console.log(props);
+  propCount = props.length;
+
+  return propCount;
+}
+
+console.log(countProps({}));
+console.log(countProps({ name: "Mango", age: 2 }));
+console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }));
+
+function countTotalSalary(salaries) {
+  let totalSalary = 0;
+
+  const values = Object.values(salaries);
+  for (let value of values) {
+    totalSalary += value;
+  }
+  return totalSalary;
+}
+
+console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }));
+
+// _______________________________________________
+
+const products = [
+  { name: "Radar", price: 1300, quantity: 4 },
+  { name: "Scanner", price: 2700, quantity: 3 },
+  { name: "Droid", price: 400, quantity: 7 },
+  { name: "Grip", price: 1200, quantity: 9 },
+];
+
+function getProductPrice(productName) {
+  let price;
+  for (let product of products) {
+    if (productName === product.name) {
+      price = product.price;
+      break;
+    }
+    if (productName !== product.name) {
+      price = null;
+    }
+  }
+  return price;
+}
+
+console.log(getProductPrice("Radar"));
+console.log(getProductPrice("Engine"));
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+function getAllPropValues(propName) {
+  // Change code below this line
+  let props = [];
+  for (let product of products) {
+    if (propName === "name") {
+      props.push(product.name);
+    }
+    if (propName === "price") {
+      props.push(product.price);
+    }
+    if (propName === "quantity") {
+      props.push(product.quantity);
+    }
+  }
+
+  return props;
+  // Change code above this line
+}
+
+console.log(getAllPropValues("name"));
+
+function calculateTotalPrice(productName) {
+  // Change code below this line
+  let total;
+  for (let product of products) {
+    // console.log(product);
+    // console.log(product.price);
+    // console.log(product.quantity);
+    // console.log(product.price * product.quantity);
+    if (productName === product.name) {
+      total = product.price * product.quantity;
+    }
+  }
+
+  return total;
+  // Change code above this line
+}
+
+console.log(calculateTotalPrice("Radar"));
