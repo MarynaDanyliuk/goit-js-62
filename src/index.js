@@ -698,3 +698,501 @@ console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"));
 console.log(
   atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion")
 );
+
+function makePizza(pizzaName, callback) {
+  console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
+  callback(pizzaName);
+}
+
+makePizza("Royal Grand", function deliverPizza(pizzaName) {
+  console.log(`Delivering pizza ${pizzaName}.`);
+});
+// Change code below this line
+
+makePizza("Ultracheese", function eatPizza(pizzaName) {
+  console.log(`Eating pizza ${pizzaName}`);
+});
+
+const pizzaPalace = {
+  pizzas: ["Ultracheese", "Smoked", "Four meats"],
+  order(pizzaName, onSuccess, onError) {
+    if (this.pizzas.includes(pizzaName)) {
+      return onSuccess(pizzaName);
+    }
+    const error = `There is no pizza with a name ${pizzaName} in the assortment.`;
+    return onError(error);
+  },
+};
+// Change code above this line
+
+// Callback for onSuccess
+function makePizza(pizzaName) {
+  return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+}
+
+// Callback for onError
+function onOrderError(error) {
+  return `Error! ${error}`;
+}
+
+// Method calls with callbacks
+pizzaPalace.order("Smoked", makePizza, onOrderError);
+pizzaPalace.order("Four meats", makePizza, onOrderError);
+pizzaPalace.order("Big Mike", makePizza, onOrderError);
+pizzaPalace.order("Vienna", makePizza, onOrderError);
+console.log(pizzaPalace.order("Smoked", makePizza, onOrderError));
+console.log(pizzaPalace.order("Four meats", makePizza, onOrderError));
+console.log(pizzaPalace.order("Big Mike", makePizza, onOrderError));
+console.log(pizzaPalace.order("Vienna", makePizza, onOrderError));
+
+const calculateTotalPrice1 = (orderedItems) => {
+  let totalPrice = 0;
+  orderedItems.forEach((item) => {
+    totalPrice += item;
+  });
+  return totalPrice;
+};
+
+// // console.log(calculateTotalPrice1([412, 371, 94, 63, 176]));
+
+// // const filterArray = (numbers, value) => {
+// //   const filteredNumbers = [];
+
+// //   numbers.forEach((number) => {
+// //     if (number > value) {
+// //       filteredNumbers.push(number);
+// //     }
+// //   });
+
+// //   return filteredNumbers;
+// // };
+
+// // const getCommonElements = (firstArray, secondArray) => {
+// //   const commonElements = [];
+
+// //   firstArray.forEach((element) => {
+// //     if (secondArray.includes(element)) {
+// //       commonElements.push(element);
+// //     }
+// //   });
+
+// //   return commonElements;
+// // };
+
+// function changeEven(numbers, value) {
+//   // Change code below this line
+//   // for (let i = 0; i < numbers.length; i += 1) {
+//   //   if (numbers[i] % 2 === 0) {
+//   //     numbers[i] = numbers[i] + value;
+//   //   }
+//   // }
+//   const newArray = [];
+
+//   numbers.forEach((number) => {
+//     if (number % 2 === 0) {
+//       number += value;
+//       newArray.push(number);
+//       return number;
+//     }
+//     if (number % 2 !== 0) {
+//       newArray.push(number);
+//     }
+//   });
+//   // Change code above this line
+//   return newArray;
+// }
+
+// console.log(changeEven([44, 13, 81, 92, 36, 54], 100));
+// console.log(
+//   changeEven(
+//     [9, 24, 9, 22, 8, 22, 23, 16, 12, 14, 23, 15, 19, 18, 11, 20, 18],
+//     17
+//   )
+// );
+
+// const planets = ["Earth", "Mars", "Venus", "Jupiter"];
+// // Change code below this line
+// const planetsLengths = planets.map((planet) => {
+//   return planet.length;
+// });
+
+// console.log(planetsLengths);
+
+// const getUserNames = (users) => {
+//   return users.map((user) => {
+//     return user.name;
+//   });
+// };
+
+// const getUserEmails = (users) => {
+//   return users.map((user) => {
+//     return user.email;
+//   });
+// };
+
+// // const books = [
+// //   {
+// //     title: "The Last Kingdom",
+// //     author: "Bernard Cornwell",
+// //     genres: ["adventure", "history"],
+// //   },
+// //   {
+// //     title: "Beside Still Waters",
+// //     author: "Robert Sheckley",
+// //     genres: ["fiction", "mysticism"],
+// //   },
+// //   {
+// //     title: "Redder Than Blood",
+// //     author: "Tanith Lee",
+// //     genres: ["horror", "mysticism", "adventure"],
+// //   },
+// // ];
+// // // Change code below this line
+// // const allGenres = books.flatMap((book) => book.genres);
+// // const uniqueGenres = allGenres.filter(
+// //   (genre, index, allGenres) => allGenres.indexOf(genre) === index
+// // );
+
+// // const books = [
+// //   {
+// //     title: "The Last Kingdom",
+// //     author: "Bernard Cornwell",
+// //     rating: 8.38,
+// //   },
+// //   {
+// //     title: "Beside Still Waters",
+// //     author: "Robert Sheckley",
+// //     rating: 8.51,
+// //   },
+// //   {
+// //     title: "The Dream of a Ridiculous Man",
+// //     author: "Fyodor Dostoevsky",
+// //     rating: 7.75,
+// //   },
+// //   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+// //   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// // ];
+
+// // const MIN_RATING = 8;
+// // const AUTHOR = "Bernard Cornwell";
+// // // Change code below this line
+
+// // const topRatedBooks = books.filter((book) => book.rating >= MIN_RATING);
+
+// // const booksByAuthor = books.filter((book) => book.author === AUTHOR);
+
+// // console.log(topRatedBooks);
+// // console.log(booksByAuthor);
+
+// const users = [
+//   {
+//     name: "Moore Hensley",
+//     email: "moorehensley@indexia.com",
+//     eyeColor: "blue",
+//     friends: ["Sharron Pace"],
+//     isActive: false,
+//     balance: 2811,
+//     gender: "male",
+//     age: 37,
+//   },
+//   {
+//     name: "Sharlene Bush",
+//     email: "sharlenebush@tubesys.com",
+//     eyeColor: "blue",
+//     friends: ["Briana Decker", "Sharron Pace"],
+//     isActive: true,
+//     balance: 3821,
+//     gender: "female",
+//     age: 34,
+//   },
+//   {
+//     name: "Ross Vazquez",
+//     email: "rossvazquez@xinware.com",
+//     eyeColor: "green",
+//     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//     isActive: false,
+//     balance: 3793,
+//     gender: "male",
+//     age: 24,
+//   },
+//   {
+//     name: "Elma Head",
+//     email: "elmahead@omatom.com",
+//     eyeColor: "green",
+//     friends: ["Goldie Gentry", "Aisha Tran"],
+//     isActive: true,
+//     balance: 2278,
+//     gender: "female",
+//     age: 21,
+//   },
+//   {
+//     name: "Carey Barr",
+//     email: "careybarr@nurali.com",
+//     eyeColor: "blue",
+//     friends: ["Jordan Sampson", "Eddie Strong"],
+//     isActive: true,
+//     balance: 3951,
+//     gender: "male",
+//     age: 27,
+//   },
+//   {
+//     name: "Blackburn Dotson",
+//     email: "blackburndotson@furnigeer.com",
+//     eyeColor: "brown",
+//     friends: ["Jacklyn Lucas", "Linda Chapman"],
+//     isActive: false,
+//     balance: 1498,
+//     gender: "male",
+//     age: 38,
+//   },
+//   {
+//     name: "Sheree Anthony",
+//     email: "shereeanthony@kog.com",
+//     eyeColor: "brown",
+//     friends: ["Goldie Gentry", "Briana Decker"],
+//     isActive: true,
+//     balance: 2764,
+//     gender: "female",
+//     age: 39,
+//   },
+// ];
+
+// const getFriends = (users) => {
+//   const allFriends = users.flatMap((user) => user.friends);
+//   const uniqueFriends = allFriends.filter(
+//     (friend, index, allFriends) => allFriends.indexOf(friend) === index
+//   );
+//   return uniqueFriends;
+// };
+
+// console.log(getFriends);
+
+// const getActiveUsers = (users) => {
+//   return users.filter((user) => user.isActive === true);
+// };
+
+// const getInactiveUsers = (users) => {
+//   return users.filter((user) => user.isActive === false);
+// };
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+// ];
+// const BOOK_TITLE = "The Dream of a Ridiculous Man";
+// const AUTHOR = "Robert Sheckley";
+// // Change code below this line
+
+// const bookWithTitle = books.find((book) => book.title === BOOK_TITLE);
+// const bookByAuthor = books.find((book) => book.author === AUTHOR);
+
+// const getUserWithEmail = (users, email) => {
+//   return users.find((user) => user.email === email);
+// };
+
+// const isEveryUserActive = (users) => {
+//   return users.every((user) => user.isActive === true);
+// };
+
+// const players = [
+//   { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+//   { name: "Poly", playtime: 469, gamesPlayed: 2 },
+//   { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+//   { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+// ];
+// // Change code below this line
+
+// const totalAveragePlaytimePerGame = players.reduce((total, player) => {
+//   return total + player.playtime / player.gamesPlayed;
+// }, 0);
+
+// const calculateTotalBalance = (users) => {
+//   return users.reduce((total, user) => {
+//     return total + user.balance;
+//   }, 0);
+// };
+
+// const getTotalFriendCount = (users) => {
+//   return users.reduce((totalFriends, user) => {
+//     return totalFriends + user.friends.length;
+//   }, 0);
+// };
+
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// const authors = [
+//   "Tanith Lee",
+//   "Bernard Cornwell",
+//   "Robert Sheckley",
+//   "Fyodor Dostoevsky",
+// ];
+// Change code below this line
+
+// const ascendingReleaseDates = [...releaseDates].sort();
+
+// const alphabeticalAuthors = [...authors].sort();
+
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// // Change code below this line
+
+// const ascendingReleaseDates = [...releaseDates].sort((a, b) => a - b);
+
+// const descendingReleaseDates = [...releaseDates].sort((a, b) => b - a);
+
+const users = [
+  {
+    name: "Moore Hensley",
+    email: "moorehensley@indexia.com",
+    eyeColor: "blue",
+    friends: ["Sharron Pace"],
+    isActive: false,
+    balance: 2811,
+    gender: "male",
+  },
+  {
+    name: "Sharlene Bush",
+    email: "sharlenebush@tubesys.com",
+    eyeColor: "blue",
+    friends: ["Briana Decker", "Sharron Pace"],
+    isActive: true,
+    balance: 3821,
+    gender: "female",
+  },
+  {
+    name: "Ross Vazquez",
+    email: "rossvazquez@xinware.com",
+    eyeColor: "green",
+    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+    isActive: false,
+    balance: 3793,
+    gender: "male",
+  },
+  {
+    name: "Elma Head",
+    email: "elmahead@omatom.com",
+    eyeColor: "green",
+    friends: ["Goldie Gentry", "Aisha Tran"],
+    isActive: true,
+    balance: 2278,
+    gender: "female",
+  },
+  {
+    name: "Carey Barr",
+    email: "careybarr@nurali.com",
+    eyeColor: "blue",
+    friends: ["Jordan Sampson", "Eddie Strong"],
+    isActive: true,
+    balance: 3951,
+    gender: "male",
+  },
+  {
+    name: "Blackburn Dotson",
+    email: "blackburndotson@furnigeer.com",
+    eyeColor: "brown",
+    friends: ["Jacklyn Lucas", "Linda Chapman"],
+    isActive: false,
+    balance: 1498,
+    gender: "male",
+  },
+  {
+    name: "Sheree Anthony",
+    email: "shereeanthony@kog.com",
+    eyeColor: "brown",
+    friends: ["Goldie Gentry", "Briana Decker"],
+    isActive: true,
+    balance: 2764,
+    gender: "female",
+  },
+];
+
+const sortByDescendingFriendCount = (users) => {
+  return [...users].sort(
+    (firstUser, secondUser) =>
+      firstUser.friends.length - secondUser.friends.length
+  );
+};
+console.log(sortByDescendingFriendCount(users));
+
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    rating: 8.38,
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    rating: 8.51,
+  },
+  {
+    title: "The Dream of a Ridiculous Man",
+    author: "Fyodor Dostoevsky",
+    rating: 7.75,
+  },
+  { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+  {
+    title: "The Dreams in the Witch House",
+    author: "Howard Lovecraft",
+    rating: 8.67,
+  },
+];
+const MIN_BOOK_RATING = 8;
+// Change code below this line
+
+const names = [...books]
+  .filter((book) => book.rating > MIN_BOOK_RATING)
+  .sort((firstBook, secondBook) =>
+    firstBook.author.localeCompare(secondBook.author)
+  )
+  .map((book) => book.author);
+
+console.log(names);
+
+const getNamesSortedByFriendCount = (users) => {
+  return [...users]
+    .sort(
+      (firstUser, secondUser) =>
+        firstUser.friends.length - secondUser.friends.length
+    )
+    .map((user) => user.name);
+};
+console.log(getNamesSortedByFriendCount(users));
+
+const getSortedFriends = (users) => {
+  const allFriends = [...users].flatMap((user) => user.friends);
+
+  const uniqueFriends = allFriends.filter(
+    (friend, index, allFriends) => allFriends.indexOf(friend) === index
+  );
+
+  uniqueFriends.sort((firstFriend, secondFriend) =>
+    firstFriend.localeCompare(secondFriend)
+  );
+
+  return uniqueFriends;
+};
+
+console.log(getSortedFriends(users));
+
+const getTotalBalanceByGender = (users, gender) => {
+  const usersGender = users.filter(
+    (user, index, users) => user.gender === gender
+  );
+  return usersGender.reduce((total, user) => {
+    return total + user.balance;
+  }, 0);
+};
+console.log(getTotalBalanceByGender(users, "male"));
