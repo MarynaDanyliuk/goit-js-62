@@ -18,45 +18,45 @@ function checkForName(fullName, name) {
   return result;
 }
 
-function getShippingCost(country) {
-  let message;
-  // Change code below this line
+// function getShippingCost(country) {
+//   let message;
+//   // Change code below this line
 
-  switch (
-    country // Change this line
-  ) {
-    case "Australia":
-      price = 170;
-      message = `Shipping to ${country} will cost ${price} credits`;
-      break;
-    case "Germany":
-      message = "Sorry, there is no delivery to your country";
-      break;
-    case "China":
-      price = 100;
-      message = `Shipping to ${country} will cost ${price} credits`;
-      break;
-    case "Chile":
-      price = 250;
-      message = `Shipping to ${country} will cost ${price} credits`;
-      break;
-    case "Jamaica":
-      price = 120;
-      message = `Shipping to ${country} will cost ${price} credits`;
-      break;
-    case "Sweden":
-      message = "Sorry, there is no delivery to your country";
-      break;
-    default:
-      message = "Sorry, there is no delivery to your country";
-  }
-  // Change code above this line
-  return message;
-}
+//   switch (
+//     country // Change this line
+//   ) {
+//     case "Australia":
+//       price = 170;
+//       message = `Shipping to ${country} will cost ${price} credits`;
+//       break;
+//     case "Germany":
+//       message = "Sorry, there is no delivery to your country";
+//       break;
+//     case "China":
+//       price = 100;
+//       message = `Shipping to ${country} will cost ${price} credits`;
+//       break;
+//     case "Chile":
+//       price = 250;
+//       message = `Shipping to ${country} will cost ${price} credits`;
+//       break;
+//     case "Jamaica":
+//       price = 120;
+//       message = `Shipping to ${country} will cost ${price} credits`;
+//       break;
+//     case "Sweden":
+//       message = "Sorry, there is no delivery to your country";
+//       break;
+//     default:
+//       message = "Sorry, there is no delivery to your country";
+//   }
+//   // Change code above this line
+//   return message;
+// }
 
-const x = getShippingCost("Australia");
+// const x = getShippingCost("Australia");
 
-console.log(x);
+// console.log(x);
 // ____________________________________;
 
 const stars = 3;
@@ -1196,3 +1196,272 @@ const getTotalBalanceByGender = (users, gender) => {
   }, 0);
 };
 console.log(getTotalBalanceByGender(users, "male"));
+
+// _________ 5 module_____________
+
+// const pizzaPalace = {
+//   pizzas: ["Supercheese", "Smoked", "Four meats"],
+//   // Change code below this line
+//   checkPizza(pizzaName) {
+//     return this.pizzas.includes(pizzaName);
+//   },
+//   order(pizzaName) {
+//     const isPizzaAvailable = this.checkPizza(pizzaName);
+
+//     if (!isPizzaAvailable) {
+//       return `Sorry, there is no pizza named «${pizzaName}»`;
+//     }
+
+//     return `Order accepted, preparing «${pizzaName}» pizza`;
+//   },
+//   // Change code above this line
+// };
+
+const customer = {
+  username: "Mango",
+  balance: 24000,
+  discount: 0.1,
+  orders: ["Burger", "Pizza", "Salad"],
+  // Change code below this line
+  getBalance() {
+    return this.balance;
+  },
+  getDiscount() {
+    return this.discount;
+  },
+  setDiscount(value) {
+    this.discount = value;
+  },
+  getOrders() {
+    return this.orders;
+  },
+  addOrder(cost, order) {
+    this.balance -= cost - cost * this.discount;
+    this.orders.push(order);
+  },
+  // Change code above this line
+};
+
+customer.setDiscount(0.15);
+console.log(customer.getDiscount()); // 0.15
+customer.addOrder(5000, "Steak");
+console.log(customer.getBalance()); // 19750
+console.log(customer.getOrders()); // ["Burger", "Pizza", "Salad", "Steak"]
+
+const historyService = {
+  orders: [
+    { email: "jacob@hotmail.com", dish: "Burrito" },
+    { email: "solomon@topmail.net", dish: "Burger" },
+    { email: "artemis@coldmail.net", dish: "Pizza" },
+    { email: "solomon@topmail.net", dish: "Apple pie" },
+    { email: "jacob@hotmail.com", dish: "Taco" },
+  ],
+  // Change code below this line
+  getOrdersLog() {
+    return this.orders
+      .map((order) => `email: ${order.email} dish: ${order.dish}`)
+      .join(" - ");
+  },
+  getEmails() {
+    const emails = this.orders.map((order) => order.email);
+    const uniqueEmails = new Set(emails);
+    return [...uniqueEmails];
+  },
+  getOrdersByEmail(email) {
+    return this.orders.filter((order) => order.email === email);
+  },
+  // Change code above this line
+};
+
+const parent = {
+  name: "Stacey",
+  surname: "Moore",
+  age: 54,
+  heritage: "Irish",
+};
+// Change code below this line
+const child = Object.create(parent);
+// const child = { name: "Jason", age: 27, __proto__: parent };
+
+// Change code above this line
+child.name = "Jason";
+child.age = 27;
+
+const ancestor = {
+  name: "Paul",
+  age: 83,
+  surname: "Dawson",
+  heritage: "Irish",
+};
+// Change code below this line
+
+// const parent = Object.create(ancestor);
+// parent.name = "Stacey";
+// parent.surname = "Moore";
+// parent.age = 54;
+
+// const child = Object.create(parent);
+// child.name = "Jason";
+// child.age = 27;
+
+// Change code above this line
+
+// class Car {
+//   // Change code below this line
+//   constructor(brand, model, price) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+//   // Change code above this line
+// }
+
+// console.log(new Car("Audi", "Q3", 36000));
+// console.log(new Car("BMW", "X1", 38900));
+
+//  деструктуризаціяю Патерн Об єкт параметрів
+
+// class Car {
+//   // Change code below this line
+//   constructor({ brand, model, price }) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+//   // Change code above this line
+// }
+
+// console.log(new Car({ brand: "BMW", model: "X5", price: 58900 }));
+
+// class Car {
+//   constructor({ brand, model, price }) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+//   // Change code below this line
+//   getPrice() {
+//     return this.price;
+//   }
+//   changePrice(newPrice) {
+//     return (this.price = newPrice);
+//   }
+//   // Change code above this line
+// }
+
+class Storage {
+  constructor(items) {
+    this.items = items;
+  }
+
+  getItems() {
+    return this.items;
+  }
+  addItem(newItem) {
+    return this.items.push(newItem);
+  }
+  removeItem(itemToRemove) {
+    const indexOf = this.items.indexOf(itemToRemove);
+
+    return this.items.splice(indexOf, 1);
+  }
+}
+
+// Change code above this line
+const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+storage.addItem("Droid");
+console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+storage.removeItem("Prolonger");
+console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+
+class StringBuilder {
+  constructor(initialValue) {
+    this.value = initialValue;
+  }
+  getValue() {
+    return this.value;
+  }
+
+  padEnd(str) {
+    return (this.value = this.value + str);
+  }
+
+  padStart(str) {
+    return (this.value = str + this.value);
+  }
+  padBoth(str) {
+    this.padEnd(str);
+    this.padStart(str);
+    // return (this.value = str + this.value + str);
+  }
+}
+
+console.dir(StringBuilder);
+// Change code above this line
+const builder = new StringBuilder(".");
+console.log(builder.getValue()); // "."
+
+builder.padStart("^");
+console.log(builder.getValue()); // "^."
+builder.padEnd("^");
+console.log(builder.getValue()); // "^.^"
+builder.padBoth("=");
+console.log(builder.getValue()); // "=^.^="
+
+// class Car {
+//   #brand;
+//   constructor({ brand, model, price }) {
+//     this.#brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+
+//   getBrand() {
+//     return this.#brand;
+//   }
+
+//   changeBrand(newBrand) {
+//     this.#brand = newBrand;
+//   }
+// }
+// console.log(new Car({ brand: "bmw", model: "X5", price: 58900 }));
+
+class Car {
+  // Change code below this line
+  static MAX_PRICE = 50000;
+
+  #price;
+
+  constructor({ price }) {
+    this.#price = price;
+  }
+
+  get price() {
+    return this.#price;
+  }
+
+  set price(newPrice) {
+    this.#price = newPrice;
+    if (this.#price >= Car.MAX_PRICE) {
+      return (this.#price = 49000);
+    }
+    return (this.#price = newPrice);
+  }
+}
+console.log(Car.MAX_PRICE);
+
+const audi = new Car({ price: 35000 });
+console.log(audi.price); // 35000
+
+audi.price = 49000;
+console.log(audi.price); // 49000
+
+audi.price = 51000;
+console.log(audi.price); // 49000
+
+//  set price(newPrice) {
+//      const MAX_PRICE1 = 49000;
+//       this.#price = newPrice;
+//       if (newPrice > Car.MAX_PRICE) return (this.#price = MAX_PRICE1);
+//   }
