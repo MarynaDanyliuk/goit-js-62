@@ -1,11 +1,11 @@
-console.log("Hello, Mary!");
+console.log('Hello, Mary!');
 // ____________________________________;
 
 function checkForSpam(message) {
   let result;
   // Change code below this line
-  const stopword1 = "spam";
-  const stopword2 = "sale";
+  const stopword1 = 'spam';
+  const stopword2 = 'sale';
   message = message.toLowerCase();
   result = message.includes(stopword1) || message.includes(stopword2);
 
@@ -92,7 +92,7 @@ switch (stars) {
     break;
 
   default:
-    console.log("Такого количества звезд нет");
+    console.log('Такого количества звезд нет');
 }
 
 console.log(pricee);
@@ -100,25 +100,25 @@ console.log(pricee);
 // 1. назначить переменные
 
 const option = 1;
-let message = "";
+let message = '';
 
 // //  2. Записать свитч выбора опции
 
 switch (option) {
   case 1:
-    message = "Вы сможете забрать товар завтра с 12:00 в нашем офисе";
+    message = 'Вы сможете забрать товар завтра с 12:00 в нашем офисе';
     break;
 
   case 2:
-    message = "Курьер доставит заказ завтра с 9:00 до 18:00";
+    message = 'Курьер доставит заказ завтра с 9:00 до 18:00';
     break;
 
   case 3:
-    message = "Посылка будет отправлена сегодня";
+    message = 'Посылка будет отправлена сегодня';
     break;
 
   default:
-    message = "Вам перезвонит менеджер";
+    message = 'Вам перезвонит менеджер';
 }
 
 // // 3. Сделать лог месседж
@@ -131,7 +131,7 @@ for (let i = 10; i < 20; i += 1) {
   console.log(i);
 }
 
-console.log("jsdjs");
+console.log('jsdjs');
 
 // Цикл for
 // Общая сумма зарплаты работникам, которая генерится случайными числами от 500 до 5000
@@ -152,7 +152,7 @@ for (let i = 1; i < 5; i += 1) {
   totalSalary += salary;
 }
 
-console.log("totalSalary: ", totalSalary);
+console.log('totalSalary: ', totalSalary);
 
 // скрипт подсчета суммы всех четных чисел в диапазоне от min до max
 const min = 6;
@@ -162,7 +162,7 @@ let total = 0;
 for (let i = min; i <= max; i += 1) {
   console.log(i);
   if (i % 2 === 0) {
-    console.log("четное: ", i);
+    console.log('четное: ', i);
   }
 }
 // _________
@@ -193,7 +193,7 @@ for (let i = min; i <= max; i += 1) {
 
 // const array = ["a", "b", "c", "d", "e"];
 // let array = ["a", "b", "c", "d", "e"];
-const array = ["a", "b", "c", "d", "e"];
+const array = ['a', 'b', 'c', 'd', 'e'];
 console.log(array);
 
 // function getExtremeElements(array) {
@@ -205,35 +205,35 @@ console.log(array);
 
 // _____________________________________
 
-const friends = ["Andriy", "Mary", "Misha", "Masha"];
+const friends = ['Andriy', 'Mary', 'Misha', 'Masha'];
 console.table(friends);
 const lastIndex = friends.length - 1;
 
 for (i = 0; i <= lastIndex; i += 1) {
-  friends[i] += "-1";
+  friends[i] += '-1';
 }
 console.table(friends);
 
 // _________________________________________
 
-const title = "Andriy Mary Misha Masha";
+const title = 'Andriy Mary Misha Masha';
 
 function slugify(title) {
   let result;
-  result = title.split(" ").join("-").toLowerCase();
+  result = title.split(' ').join('-').toLowerCase();
   return result;
   // Change code above this line
 }
-console.log(title.split(" ").join("-").toLowerCase());
-console.log(slugify("Andriy Mary Misha Masha"));
+console.log(title.split(' ').join('-').toLowerCase());
+console.log(slugify('Andriy Mary Misha Masha'));
 
 // _______________________________________________
 
 function checkForSpam(message) {
   let result;
 
-  const stopword1 = "spam";
-  const stopword2 = "sale";
+  const stopword1 = 'spam';
+  const stopword2 = 'sale';
   message = message.toLowerCase();
   result = message.includes(stopword1) || message.includes(stopword2);
 
@@ -256,9 +256,9 @@ function makeArray(firstArray, secondArray, maxLength) {
   // Change code above this line
 }
 
-console.log(makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3));
-console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0));
-console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4));
+console.log(makeArray(['Mango', 'Poly'], ['Ajax', 'Chelsea'], 3));
+console.log(makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus', 'Venus'], 0));
+console.log(makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus'], 4));
 
 // ________________________________________
 
@@ -277,7 +277,7 @@ console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4));
 
 // console.log(calculateTotal(7));
 
-const clients = ["Mango", "Ajax", "Poly"];
+const clients = ['Mango', 'Ajax', 'Poly'];
 
 for (let i = 0; i < clients.length; i += 1) {
   console.log(clients[i]);
@@ -287,7 +287,7 @@ for (let i = 0; i < clients.length; i += 1) {
 
 function findLongestWord(string) {
   // Change code below this line
-  const words = string.split(" ");
+  const words = string.split(' ');
 
   let biggestWord = words[0];
 
@@ -300,7 +300,7 @@ function findLongestWord(string) {
   // Change code above this line
 }
 
-console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
+console.log(findLongestWord('The quick brown fox jumped over the lazy dog'));
 
 function createArrayOfNumbers(min, max) {
   const numbers = [];
@@ -393,21 +393,21 @@ function includes(array, value) {
   for (let number of array) {
     // number === value ? "true" : "false";
     if (number === value) {
-      message = "true";
+      message = 'true';
       return message;
     }
-    message = "false";
+    message = 'false';
   }
   return message;
 }
 
 console.log(includes([1, 2, 3, 4, 5], 3));
-console.log(includes([("apple", "plum", "pear", "orange")], "plum"));
+console.log(includes([('apple', 'plum', 'pear', 'orange')], 'plum'));
 console.log(
-  includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus")
+  includes(['Earth', 'Mars', 'Venus', 'Jupiter', 'Saturn'], 'Uranus')
 );
 console.log(
-  includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter")
+  includes(['Earth', 'Mars', 'Venus', 'Jupiter', 'Saturn'], 'Jupiter')
 );
 
 // for (let i = 0; i <= array.length; i += 1) {
@@ -420,15 +420,15 @@ console.log(
 
 // // _________________________________________
 const apartment = {
-  imgUrl: "https://via.placeholder.com/640x480",
-  descr: "Spacious apartment in the city center",
+  imgUrl: 'https://via.placeholder.com/640x480',
+  descr: 'Spacious apartment in the city center',
   rating: 4.7,
   price: 5000,
-  tags: ["premium", "promoted", "top", "trusted"],
+  tags: ['premium', 'promoted', 'top', 'trusted'],
   owner: {
-    name: "Henry Sibola",
-    phone: "982-126-1588",
-    email: "henry.carter@aptmail.com",
+    name: 'Henry Sibola',
+    phone: '982-126-1588',
+    email: 'henry.carter@aptmail.com',
   },
 };
 
@@ -473,8 +473,8 @@ function countProps(object) {
 }
 
 console.log(countProps({}));
-console.log(countProps({ name: "Mango", age: 2 }));
-console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }));
+console.log(countProps({ name: 'Mango', age: 2 }));
+console.log(countProps({ mail: 'poly@mail.com', isOnline: true, score: 500 }));
 
 function countTotalSalary(salaries) {
   let totalSalary = 0;
@@ -491,10 +491,10 @@ console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }));
 // _______________________________________________
 
 const products = [
-  { name: "Radar", price: 1300, quantity: 4 },
-  { name: "Scanner", price: 2700, quantity: 3 },
-  { name: "Droid", price: 400, quantity: 7 },
-  { name: "Grip", price: 1200, quantity: 9 },
+  { name: 'Radar', price: 1300, quantity: 4 },
+  { name: 'Scanner', price: 2700, quantity: 3 },
+  { name: 'Droid', price: 400, quantity: 7 },
+  { name: 'Grip', price: 1200, quantity: 9 },
 ];
 
 function getProductPrice(productName) {
@@ -511,8 +511,8 @@ function getProductPrice(productName) {
   return price;
 }
 
-console.log(getProductPrice("Radar"));
-console.log(getProductPrice("Engine"));
+console.log(getProductPrice('Radar'));
+console.log(getProductPrice('Engine'));
 
 // const products = [
 //   { name: "Radar", price: 1300, quantity: 4 },
@@ -525,13 +525,13 @@ function getAllPropValues(propName) {
   // Change code below this line
   let props = [];
   for (let product of products) {
-    if (propName === "name") {
+    if (propName === 'name') {
       props.push(product.name);
     }
-    if (propName === "price") {
+    if (propName === 'price') {
       props.push(product.price);
     }
-    if (propName === "quantity") {
+    if (propName === 'quantity') {
       props.push(product.quantity);
     }
   }
@@ -540,7 +540,7 @@ function getAllPropValues(propName) {
   // Change code above this line
 }
 
-console.log(getAllPropValues("name"));
+console.log(getAllPropValues('name'));
 
 function calculateTotalPrice(productName) {
   // Change code below this line
@@ -559,7 +559,7 @@ function calculateTotalPrice(productName) {
   // Change code above this line
 }
 
-console.log(calculateTotalPrice("Radar"));
+console.log(calculateTotalPrice('Radar'));
 
 // __________________________________________
 
@@ -573,8 +573,8 @@ console.log(calculateTotalPrice("Radar"));
 
 function makeTask(data) {
   const completed = false;
-  const category = "General";
-  const priority = "Normal";
+  const category = 'General';
+  const priority = 'Normal';
   // Change code below this line
   const newObject = {
     category: category,
@@ -589,9 +589,9 @@ function makeTask(data) {
 
 console.log(
   makeTask({
-    category: "Homemade",
-    priority: "Low",
-    text: "Take out the trash",
+    category: 'Homemade',
+    priority: 'Low',
+    text: 'Take out the trash',
   })
 );
 
@@ -637,9 +637,9 @@ console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));
 
 const atTheOldToad = {
   potions: [
-    { name: "Speed potion", price: 460 },
-    { name: "Dragon breath", price: 780 },
-    { name: "Stone skin", price: 520 },
+    { name: 'Speed potion', price: 460 },
+    { name: 'Dragon breath', price: 780 },
+    { name: 'Stone skin', price: 520 },
   ],
 
   getPotions() {
@@ -686,17 +686,17 @@ const atTheOldToad = {
 };
 
 console.log(atTheOldToad.getPotions());
-console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }));
-console.log(atTheOldToad.addPotion({ name: "Speed potion", price: 460 }));
-console.log(atTheOldToad.addPotion({ name: "Power potion", price: 270 }));
-console.log(atTheOldToad.addPotion({ name: "Dragon breath", price: 700 }));
-console.log(atTheOldToad.addPotion({ name: "Stone skin", price: 240 }));
-console.log(atTheOldToad.addPotion({ name: "Dragon breath", price: 700 }));
-console.log(atTheOldToad.removePotion("Dragon breath"));
-console.log(atTheOldToad.removePotion("Speed potion"));
-console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"));
+console.log(atTheOldToad.addPotion({ name: 'Invisibility', price: 620 }));
+console.log(atTheOldToad.addPotion({ name: 'Speed potion', price: 460 }));
+console.log(atTheOldToad.addPotion({ name: 'Power potion', price: 270 }));
+console.log(atTheOldToad.addPotion({ name: 'Dragon breath', price: 700 }));
+console.log(atTheOldToad.addPotion({ name: 'Stone skin', price: 240 }));
+console.log(atTheOldToad.addPotion({ name: 'Dragon breath', price: 700 }));
+console.log(atTheOldToad.removePotion('Dragon breath'));
+console.log(atTheOldToad.removePotion('Speed potion'));
+console.log(atTheOldToad.updatePotionName('Dragon breath', 'Polymorth'));
 console.log(
-  atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion")
+  atTheOldToad.updatePotionName('Stone skin', 'Invulnerability potion')
 );
 
 function makePizza(pizzaName, callback) {
@@ -704,17 +704,17 @@ function makePizza(pizzaName, callback) {
   callback(pizzaName);
 }
 
-makePizza("Royal Grand", function deliverPizza(pizzaName) {
+makePizza('Royal Grand', function deliverPizza(pizzaName) {
   console.log(`Delivering pizza ${pizzaName}.`);
 });
 // Change code below this line
 
-makePizza("Ultracheese", function eatPizza(pizzaName) {
+makePizza('Ultracheese', function eatPizza(pizzaName) {
   console.log(`Eating pizza ${pizzaName}`);
 });
 
 const pizzaPalace = {
-  pizzas: ["Ultracheese", "Smoked", "Four meats"],
+  pizzas: ['Ultracheese', 'Smoked', 'Four meats'],
   order(pizzaName, onSuccess, onError) {
     if (this.pizzas.includes(pizzaName)) {
       return onSuccess(pizzaName);
@@ -736,18 +736,18 @@ function onOrderError(error) {
 }
 
 // Method calls with callbacks
-pizzaPalace.order("Smoked", makePizza, onOrderError);
-pizzaPalace.order("Four meats", makePizza, onOrderError);
-pizzaPalace.order("Big Mike", makePizza, onOrderError);
-pizzaPalace.order("Vienna", makePizza, onOrderError);
-console.log(pizzaPalace.order("Smoked", makePizza, onOrderError));
-console.log(pizzaPalace.order("Four meats", makePizza, onOrderError));
-console.log(pizzaPalace.order("Big Mike", makePizza, onOrderError));
-console.log(pizzaPalace.order("Vienna", makePizza, onOrderError));
+pizzaPalace.order('Smoked', makePizza, onOrderError);
+pizzaPalace.order('Four meats', makePizza, onOrderError);
+pizzaPalace.order('Big Mike', makePizza, onOrderError);
+pizzaPalace.order('Vienna', makePizza, onOrderError);
+console.log(pizzaPalace.order('Smoked', makePizza, onOrderError));
+console.log(pizzaPalace.order('Four meats', makePizza, onOrderError));
+console.log(pizzaPalace.order('Big Mike', makePizza, onOrderError));
+console.log(pizzaPalace.order('Vienna', makePizza, onOrderError));
 
-const calculateTotalPrice1 = (orderedItems) => {
+const calculateTotalPrice1 = orderedItems => {
   let totalPrice = 0;
-  orderedItems.forEach((item) => {
+  orderedItems.forEach(item => {
     totalPrice += item;
   });
   return totalPrice;
@@ -1054,71 +1054,71 @@ const calculateTotalPrice1 = (orderedItems) => {
 
 const users = [
   {
-    name: "Moore Hensley",
-    email: "moorehensley@indexia.com",
-    eyeColor: "blue",
-    friends: ["Sharron Pace"],
+    name: 'Moore Hensley',
+    email: 'moorehensley@indexia.com',
+    eyeColor: 'blue',
+    friends: ['Sharron Pace'],
     isActive: false,
     balance: 2811,
-    gender: "male",
+    gender: 'male',
   },
   {
-    name: "Sharlene Bush",
-    email: "sharlenebush@tubesys.com",
-    eyeColor: "blue",
-    friends: ["Briana Decker", "Sharron Pace"],
+    name: 'Sharlene Bush',
+    email: 'sharlenebush@tubesys.com',
+    eyeColor: 'blue',
+    friends: ['Briana Decker', 'Sharron Pace'],
     isActive: true,
     balance: 3821,
-    gender: "female",
+    gender: 'female',
   },
   {
-    name: "Ross Vazquez",
-    email: "rossvazquez@xinware.com",
-    eyeColor: "green",
-    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+    name: 'Ross Vazquez',
+    email: 'rossvazquez@xinware.com',
+    eyeColor: 'green',
+    friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
     isActive: false,
     balance: 3793,
-    gender: "male",
+    gender: 'male',
   },
   {
-    name: "Elma Head",
-    email: "elmahead@omatom.com",
-    eyeColor: "green",
-    friends: ["Goldie Gentry", "Aisha Tran"],
+    name: 'Elma Head',
+    email: 'elmahead@omatom.com',
+    eyeColor: 'green',
+    friends: ['Goldie Gentry', 'Aisha Tran'],
     isActive: true,
     balance: 2278,
-    gender: "female",
+    gender: 'female',
   },
   {
-    name: "Carey Barr",
-    email: "careybarr@nurali.com",
-    eyeColor: "blue",
-    friends: ["Jordan Sampson", "Eddie Strong"],
+    name: 'Carey Barr',
+    email: 'careybarr@nurali.com',
+    eyeColor: 'blue',
+    friends: ['Jordan Sampson', 'Eddie Strong'],
     isActive: true,
     balance: 3951,
-    gender: "male",
+    gender: 'male',
   },
   {
-    name: "Blackburn Dotson",
-    email: "blackburndotson@furnigeer.com",
-    eyeColor: "brown",
-    friends: ["Jacklyn Lucas", "Linda Chapman"],
+    name: 'Blackburn Dotson',
+    email: 'blackburndotson@furnigeer.com',
+    eyeColor: 'brown',
+    friends: ['Jacklyn Lucas', 'Linda Chapman'],
     isActive: false,
     balance: 1498,
-    gender: "male",
+    gender: 'male',
   },
   {
-    name: "Sheree Anthony",
-    email: "shereeanthony@kog.com",
-    eyeColor: "brown",
-    friends: ["Goldie Gentry", "Briana Decker"],
+    name: 'Sheree Anthony',
+    email: 'shereeanthony@kog.com',
+    eyeColor: 'brown',
+    friends: ['Goldie Gentry', 'Briana Decker'],
     isActive: true,
     balance: 2764,
-    gender: "female",
+    gender: 'female',
   },
 ];
 
-const sortByDescendingFriendCount = (users) => {
+const sortByDescendingFriendCount = users => {
   return [...users].sort(
     (firstUser, secondUser) =>
       firstUser.friends.length - secondUser.friends.length
@@ -1128,24 +1128,24 @@ console.log(sortByDescendingFriendCount(users));
 
 const books = [
   {
-    title: "The Last Kingdom",
-    author: "Bernard Cornwell",
+    title: 'The Last Kingdom',
+    author: 'Bernard Cornwell',
     rating: 8.38,
   },
   {
-    title: "Beside Still Waters",
-    author: "Robert Sheckley",
+    title: 'Beside Still Waters',
+    author: 'Robert Sheckley',
     rating: 8.51,
   },
   {
-    title: "The Dream of a Ridiculous Man",
-    author: "Fyodor Dostoevsky",
+    title: 'The Dream of a Ridiculous Man',
+    author: 'Fyodor Dostoevsky',
     rating: 7.75,
   },
-  { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+  { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
   {
-    title: "The Dreams in the Witch House",
-    author: "Howard Lovecraft",
+    title: 'The Dreams in the Witch House',
+    author: 'Howard Lovecraft',
     rating: 8.67,
   },
 ];
@@ -1153,26 +1153,26 @@ const MIN_BOOK_RATING = 8;
 // Change code below this line
 
 const names = [...books]
-  .filter((book) => book.rating > MIN_BOOK_RATING)
+  .filter(book => book.rating > MIN_BOOK_RATING)
   .sort((firstBook, secondBook) =>
     firstBook.author.localeCompare(secondBook.author)
   )
-  .map((book) => book.author);
+  .map(book => book.author);
 
 console.log(names);
 
-const getNamesSortedByFriendCount = (users) => {
+const getNamesSortedByFriendCount = users => {
   return [...users]
     .sort(
       (firstUser, secondUser) =>
         firstUser.friends.length - secondUser.friends.length
     )
-    .map((user) => user.name);
+    .map(user => user.name);
 };
 console.log(getNamesSortedByFriendCount(users));
 
-const getSortedFriends = (users) => {
-  const allFriends = [...users].flatMap((user) => user.friends);
+const getSortedFriends = users => {
+  const allFriends = [...users].flatMap(user => user.friends);
 
   const uniqueFriends = allFriends.filter(
     (friend, index, allFriends) => allFriends.indexOf(friend) === index
@@ -1195,7 +1195,7 @@ const getTotalBalanceByGender = (users, gender) => {
     return total + user.balance;
   }, 0);
 };
-console.log(getTotalBalanceByGender(users, "male"));
+console.log(getTotalBalanceByGender(users, 'male'));
 
 // _________ 5 module_____________
 
@@ -1218,10 +1218,10 @@ console.log(getTotalBalanceByGender(users, "male"));
 // };
 
 const customer = {
-  username: "Mango",
+  username: 'Mango',
   balance: 24000,
   discount: 0.1,
-  orders: ["Burger", "Pizza", "Salad"],
+  orders: ['Burger', 'Pizza', 'Salad'],
   // Change code below this line
   getBalance() {
     return this.balance;
@@ -1244,54 +1244,54 @@ const customer = {
 
 customer.setDiscount(0.15);
 console.log(customer.getDiscount()); // 0.15
-customer.addOrder(5000, "Steak");
+customer.addOrder(5000, 'Steak');
 console.log(customer.getBalance()); // 19750
 console.log(customer.getOrders()); // ["Burger", "Pizza", "Salad", "Steak"]
 
 const historyService = {
   orders: [
-    { email: "jacob@hotmail.com", dish: "Burrito" },
-    { email: "solomon@topmail.net", dish: "Burger" },
-    { email: "artemis@coldmail.net", dish: "Pizza" },
-    { email: "solomon@topmail.net", dish: "Apple pie" },
-    { email: "jacob@hotmail.com", dish: "Taco" },
+    { email: 'jacob@hotmail.com', dish: 'Burrito' },
+    { email: 'solomon@topmail.net', dish: 'Burger' },
+    { email: 'artemis@coldmail.net', dish: 'Pizza' },
+    { email: 'solomon@topmail.net', dish: 'Apple pie' },
+    { email: 'jacob@hotmail.com', dish: 'Taco' },
   ],
   // Change code below this line
   getOrdersLog() {
     return this.orders
-      .map((order) => `email: ${order.email} dish: ${order.dish}`)
-      .join(" - ");
+      .map(order => `email: ${order.email} dish: ${order.dish}`)
+      .join(' - ');
   },
   getEmails() {
-    const emails = this.orders.map((order) => order.email);
+    const emails = this.orders.map(order => order.email);
     const uniqueEmails = new Set(emails);
     return [...uniqueEmails];
   },
   getOrdersByEmail(email) {
-    return this.orders.filter((order) => order.email === email);
+    return this.orders.filter(order => order.email === email);
   },
   // Change code above this line
 };
 
 const parent = {
-  name: "Stacey",
-  surname: "Moore",
+  name: 'Stacey',
+  surname: 'Moore',
   age: 54,
-  heritage: "Irish",
+  heritage: 'Irish',
 };
 // Change code below this line
 const child = Object.create(parent);
 // const child = { name: "Jason", age: 27, __proto__: parent };
 
 // Change code above this line
-child.name = "Jason";
+child.name = 'Jason';
 child.age = 27;
 
 const ancestor = {
-  name: "Paul",
+  name: 'Paul',
   age: 83,
-  surname: "Dawson",
-  heritage: "Irish",
+  surname: 'Dawson',
+  heritage: 'Irish',
 };
 // Change code below this line
 
@@ -1368,11 +1368,11 @@ class Storage {
 }
 
 // Change code above this line
-const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+const storage = new Storage(['Nanitoids', 'Prolonger', 'Antigravitator']);
 console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
-storage.addItem("Droid");
+storage.addItem('Droid');
 console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
-storage.removeItem("Prolonger");
+storage.removeItem('Prolonger');
 console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
 
 class StringBuilder {
@@ -1399,14 +1399,14 @@ class StringBuilder {
 
 console.dir(StringBuilder);
 // Change code above this line
-const builder = new StringBuilder(".");
+const builder = new StringBuilder('.');
 console.log(builder.getValue()); // "."
 
-builder.padStart("^");
+builder.padStart('^');
 console.log(builder.getValue()); // "^."
-builder.padEnd("^");
+builder.padEnd('^');
 console.log(builder.getValue()); // "^.^"
-builder.padBoth("=");
+builder.padBoth('=');
 console.log(builder.getValue()); // "=^.^="
 
 // class Car {
@@ -1561,8 +1561,8 @@ class Admin extends User {
   // Change code below this line
 
   static AccessLevel = {
-    BASIC: "basic",
-    SUPERUSER: "superuser",
+    BASIC: 'basic',
+    SUPERUSER: 'superuser',
   };
 
   blacklist(email) {
@@ -1586,14 +1586,14 @@ class Admin extends User {
 }
 
 const mango = new Admin({
-  email: "mango@mail.com",
+  email: 'mango@mail.com',
   accessLevel: Admin.AccessLevel.SUPERUSER,
 });
 
 console.log(mango.email); // "mango@mail.com"
 console.log(mango.accessLevel); // "superuser"
 
-mango.blacklist("poly@mail.com");
+mango.blacklist('poly@mail.com');
 console.log(mango.blacklistedEmails); // ["poly@mail.com"]
-console.log(mango.isBlacklisted("mango@mail.com")); // false
-console.log(mango.isBlacklisted("poly@mail.com")); // true
+console.log(mango.isBlacklisted('mango@mail.com')); // false
+console.log(mango.isBlacklisted('poly@mail.com')); // true
