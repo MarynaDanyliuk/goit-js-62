@@ -1,0 +1,99 @@
+<header class="page-header">
+  <div class="container page-header__container">
+    <!-- LOGO -->
+    <a href="./index.html" class="logo page-header__logo">
+      <picture>
+        <source
+          srcset="
+            ./images/logo/oxi-png/logo_192x48.png     1x,
+            ./images/logo/oxi-png/logo_192x48.@2x.png 2x
+          "
+          media="(min-width: 1440px)"
+        />
+        <source
+          srcset="
+            ./images/logo/oxi-png/logo_125x31.png    1x,
+            ./images/logo/oxi-png/logo_125x31@2x.png 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="
+            ./images/logo/oxi-png/logo_101x25.png    1x,
+            ./images/logo/oxi-png/logo_101x25@2x.png 2x
+          "
+          media="(max-width: 767px)"
+        />
+        <img src="./images/logo/oxi-png/logo_192x48.@2x.png" alt="3D Freedom" />
+      </picture>
+    </a>
+    <!-- Button navigation -->
+    <div>
+      <button type="button" class="nav">Home</button>
+      <button type="button" class="nav">Library</button>
+    </div>
+
+    <!-- Вариант навигация -->
+    <!-- <nav class="page-nav is-hidden mob-nav">
+      <ul class="page-nav__list">
+        <li class="page-nav__item">
+          <a href="./index.html" class="page-nav__link">HOME</a>
+        </li>
+        <li class="page-nav__item">
+          <a href="./library.html" class="page-nav__link">LIBRARY</a>
+        </li>
+      </ul>
+    </nav> -->
+
+    <input />
+
+    <button type="button" class="filter">Watched</button>
+    <button type="button" class="filter">Queue</button>
+
+    <div class="page-header__right-block">
+      <form class="lang">
+        <select class="lang__select" name="lang">
+          <option value="ukr" selected>UKR</option>
+          <option value="eng">ENG</option>
+          <option value="rus">RUS</option>
+        </select>
+      </form>
+
+      <div class="header-phones">
+        <svg
+          width="24"
+          height="24"
+          class="header-phones__button header-phones__icon"
+          tabindex="0"
+        >
+          <use href="images/icons.svg#phone"></use>
+        </svg>
+        <div class="header-phones__popup">
+          <svg width="28" height="19" class="header-phones__popup-arrow">
+            <use href="images/icons.svg#popup-arrow"></use>
+          </svg>
+          <ul class="header-phones__list">
+            <li class="header-phones__item">
+              <a href="tel:+380936432288" class="header-phones__link">
+                <svg width="24" height="24" class="header-phones__icon">
+                  <use href="images/icons.svg#phone"></use>
+                </svg>
+                +38 (093) 643 22 88
+              </a>
+            </li>
+            <li class="header-phones__item">
+              <a href="tel:+380936432288" class="header-phones__link"
+                ><svg width="24" height="24" class="header-phones__icon">
+                  <use href="images/icons.svg#phone"></use>
+                </svg>
+                +38 (050) 345 44 23
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/nav-menu.js"></script>
+</header>

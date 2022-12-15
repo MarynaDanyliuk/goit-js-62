@@ -1,0 +1,35 @@
+body {
+  color: getColor('primary-text');
+  background-color: getColor('white');
+  font-family: $font-general;
+}
+
+.container {
+  min-width: $width-min-allowable;
+  max-width: $width-mobile;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include mq($width-tablet) {
+    max-width: $width-tablet;
+    padding: 0 32px;
+  }
+
+  @include mq($width-desktop) {
+    max-width: $width-desktop;
+  }
+}
+
+.title {
+  color: getColor('title-text');
+
+  @include font(24px, 30px, null, 700);
+
+  @include mq($width-tablet) {
+    @include font(36px, 45px);
+  }
+
+  @include mq($width-desktop) {
+    @include font(48px, 60px);
+  }
+}
