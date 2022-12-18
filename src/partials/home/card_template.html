@@ -1,20 +1,65 @@
 <div class="film__item">
-  <a class="film__link" href="large-image.jpg">
-    <img
+  <a class="film__link" href="">
+    <picture>
+      <!-- <source
+        srcset="
+          ./img/index_sq_jpg/Team/1team_1200_1x.jpg 1x,
+          ./img/index_sq_jpg/Team/1team_1200_2x.jpg 2x
+        "
+        media="(min-width: 1200px)"
+      /> -->
+      <!-- <source
+        srcset="
+          ./img/index_sq_jpg/Team/1team_768_1x.jpg 1x,
+          ./img/index_sq_jpg/Team/1team_768_2x.jpg 2x
+        "
+        media="(min-width: 768px)"
+      /> -->
+      <!-- <source
+        srcset="
+          ./img/index_sq_jpg/Team/1team_480_1x.jpg 1x,
+          ./img/index_sq_jpg/Team/1team_480_2x.jpg 2x
+        "
+        media="(max-width: 767px)"
+      /> -->
+      <!-- <img
+        class="film__image"
+        src="./img/index_sq_jpg/Team/1team_1x_480.jpg"
+        data-source="large-image.jpg"
+        alt="Image description"
+        width="270"
+      /> -->
+    </picture>
+    <!-- <img
       class="film__image"
       src="small-image.jpg"
       data-source="large-image.jpg"
       alt="Image description"
-    />
+    /> -->
     <div>
       <h1 class="film__name">Назва фільму</h1>
-      <p class="film__genre">Жанри фільму<span>рік випуску</span></p>
-      <svg class="film__rating">
-        <use href="./img/icons.svg#icon">рейтинг</use>
-      </svg>
+      <div class="film__info">
+        <p class="film__genre">
+          Жанри фільму<span class="film__release">Рік випуску</span>
+        </p>
+        <div class="film__rating-icon">
+          <span>номер currentpage</span>
+        </div>
+        <!-- <svg class="film__rating-icon">
+          <use href="./img/icons.svg#icon">рейтинг</use>
+        </svg> -->
+      </div>
     </div>
   </a>
 </div>
+
+<!-- <li class="social-net__item">
+  <a href="" class="social-net__link">
+    <svg class="social-net__icon">
+      <use href="./img/icons.svg#icon-instagram-2"></use>
+    </svg>
+  </a>
+</li> -->
 
 <!-- <iframe
   id="vimeo-player"

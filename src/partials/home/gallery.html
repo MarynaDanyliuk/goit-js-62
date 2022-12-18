@@ -1,233 +1,147 @@
 <section class="main-gallery" id="gallery">
   <div class="container">
-    <h2 class="main-gallery__title">Галерея</h2>
-    <ul class="main-gallery__list">
-      <li class="main-gallery__item">
-        <picture class="main-gallery__img">
-          <source
-            srcset="
-              ./images/main/desktop/gallery/gallery-webp/gallary-img-1.webp    1x,
-              ./images/main/desktop/gallery/gallery-webp/gallary-img-1@2x.webp 2x
-            "
-            media="(min-width: 1440px)"
-            type="image/webp"
-          />
-          <source
-            srcset="
-              ./images/main/desktop/gallery/gallery-mozjpeg/gallary-img-1.jpg    1x,
-              ./images/main/desktop/gallery/gallery-mozjpeg/gallary-img-1@2x.jpg 2x
-            "
-            media="(min-width: 1440px)"
-          />
-          <source
-            srcset="
-              ./images/main/tablet/gallery/gallery-webp/gallary-img-1.webp    1x,
-              ./images/main/tablet/gallery/gallery-webp/gallary-img-1@2x.webp 2x
-            "
-            media="(min-width: 768px)"
-            type="image/webp"
-          />
-          <source
-            srcset="
-              ./images/main/tablet/gallery/gallery-mozjpeg/gallary-img-1.jpg    1x,
-              ./images/main/tablet/gallery/gallery-mozjpeg/gallary-img-1@2x.jpg 2x
-            "
-            media="(min-width: 768px)"
-          />
-          <source
-            srcset="
-              ./images/main/mobile/gallery/gallery-webp/gallary-img-1.webp    1x,
-              ./images/main/mobile/gallery/gallery-webp/gallary-img-1@2x.webp 2x
-            "
-            media="(max-width: 767px)"
-            type="image/webp"
-          />
-          <source
-            srcset="
-              ./images/main/mobile/gallery/gallery-mozjpeg/gallary-img-1.jpg    1x,
-              ./images/main/mobile/gallery/gallery-mozjpeg/gallary-img-1@2x.jpg 2x
-            "
-            media="(max-width: 767px)"
-          />
+    <ul class="gallery">
+      <li class="gallery__item">
+        <a href="" class="film__link">
           <img
-            src="./images/main/desktop/gallery/gallery-mozjpeg/gallary-img-1.jpg"
-            alt="3-Д зображення деталі з зонами навантаження"
-            class="main-gallery__img--width"
+            class="film__image"
+            src="/src/images/main/desktop/gallery/more-photos-mozjpeg/more-photos-3.jpg"
+            alt="Image description"
           />
-        </picture>
-        <h3 class="main-gallery__description">
-          Інженерні методи аналізу та контролю якості
-        </h3>
+          <div class="film-info">
+            <h1 class="film__name">Назва фільму</h1>
+            <p class="film__genre">
+              Жанри фільму<span class="film__release">Рік випуску</span>
+            </p>
+            <div class="film__rating-icon">
+              <span>номер currentpage</span>
+            </div>
+            <!-- <svg class="film__rating-icon">
+          <use href="./img/icons.svg#icon">рейтинг</use>
+        </svg> -->
+          </div>
+        </a>
       </li>
-      <li class="main-gallery__item">
-        <picture class="main-gallery__img">
-          <source
-            srcset="
-              ./images/main/desktop/gallery/gallery-webp/gallary-img-2.webp    1x,
-              ./images/main/desktop/gallery/gallery-webp/gallary-img-2@2x.webp 2x
-            "
-            media="(min-width: 1440px)"
-            type="image/webp"
-          />
-          <source
-            srcset="
-              ./images/main/desktop/gallery/gallery-mozjpeg/gallary-img-2.jpg    1x,
-              ./images/main/desktop/gallery/gallery-mozjpeg/gallary-img-2@2x.jpg 2x
-            "
-            media="(min-width: 1440px)"
-          />
-          <source
-            srcset="
-              ./images/main/tablet/gallery/gallery-webp/gallary-img-2.webp    1x,
-              ./images/main/tablet/gallery/gallery-webp/gallary-img-2@2x.webp 2x
-            "
-            media="(min-width: 768px)"
-            type="image/webp"
-          />
-          <source
-            srcset="
-              ./images/main/tablet/gallery/gallery-mozjpeg/gallary-img-2.jpg    1x,
-              ./images/main/tablet/gallery/gallery-mozjpeg/gallary-img-2@2x.jpg 2x
-            "
-            media="(min-width: 768px)"
-          />
-          <source
-            srcset="
-              ./images/main/mobile/gallery/gallery-webp/gallary-img-2.webp    1x,
-              ./images/main/mobile/gallery/gallery-webp/gallary-img-2@2x.webp 2x
-            "
-            media="(max-width: 767px)"
-            type="image/webp"
-          />
-          <source
-            srcset="
-              ./images/main/mobile/gallery/gallery-mozjpeg/gallary-img-2.jpg    1x,
-              ./images/main/mobile/gallery/gallery-mozjpeg/gallary-img-2@2x.jpg 2x
-            "
-            media="(max-width: 767px)"
-          />
+      <li class="gallery__item">
+        <a
+          href="/src/images/main/desktop/gallery/more-photos-mozjpeg/more-photos-3.jpg"
+          class="film__link"
+        >
           <img
-            src="./images/main/desktop/gallery/gallery-mozjpeg/gallary-img-2.jpg"
-            alt="Сканування масштабованої моделі автомобіля"
-            class="main-gallery__img--width"
+            class="film__image"
+            src="/src/images/main/desktop/gallery/more-photos-mozjpeg/more-photos-3.jpg"
+            alt="Image description"
           />
-        </picture>
-        <h3 class="main-gallery__description">Високоточне 3D сканування</h3>
+          <div class="film-info">
+            <h1 class="film__name">Назва фільму</h1>
+            <p class="film__genre">
+              Жанри фільму<span class="film__release">Рік випуску</span>
+            </p>
+            <div class="film__rating-icon">
+              <span>номер currentpage</span>
+            </div>
+            <!-- <svg class="film__rating-icon">
+          <use href="./img/icons.svg#icon">рейтинг</use>
+        </svg> -->
+          </div>
+        </a>
       </li>
-      <li class="main-gallery__item">
-        <picture class="main-gallery__img">
-          <source
-            srcset="
-              ./images/main/desktop/gallery/gallery-webp/gallary-img-3.webp    1x,
-              ./images/main/desktop/gallery/gallery-webp/gallary-img-3@2x.webp 2x
-            "
-            media="(min-width: 1440px)"
-            type="image/webp"
-          />
-          <source
-            srcset="
-              ./images/main/desktop/gallery/gallery-mozjpeg/gallary-img-3.jpg    1x,
-              ./images/main/desktop/gallery/gallery-mozjpeg/gallary-img-3@2x.jpg 2x
-            "
-            media="(min-width: 1440px)"
-          />
-          <source
-            srcset="
-              ./images/main/tablet/gallery/gallery-webp/gallary-img-3.webp    1x,
-              ./images/main/tablet/gallery/gallery-webp/gallary-img-3@2x.webp 2x
-            "
-            media="(min-width: 768px)"
-            type="image/webp"
-          />
-          <source
-            srcset="
-              ./images/main/tablet/gallery/gallery-mozjpeg/gallary-img-3.jpg    1x,
-              ./images/main/tablet/gallery/gallery-mozjpeg/gallary-img-3@2x.jpg 2x
-            "
-            media="(min-width: 768px)"
-          />
-          <source
-            srcset="
-              ./images/main/mobile/gallery/gallery-webp/gallary-img-3.webp    1x,
-              ./images/main/mobile/gallery/gallery-webp/gallary-img-3@2x.webp 2x
-            "
-            media="(max-width: 767px)"
-            type="image/webp"
-          />
-          <source
-            srcset="
-              ./images/main/mobile/gallery/gallery-mozjpeg/gallary-img-3.jpg    1x,
-              ./images/main/mobile/gallery/gallery-mozjpeg/gallary-img-3@2x.jpg 2x
-            "
-            media="(max-width: 767px)"
-          />
+      <li class="gallery__item">
+        <a
+          href="/src/images/main/desktop/gallery/more-photos-mozjpeg/more-photos-3.jpg"
+          class="film__link"
+        >
           <img
-            src="./images/main/desktop/gallery/gallery-mozjpeg/gallary-img-3.jpg"
-            alt="Зображення 3-Д моделі деталі"
-            class="main-gallery__img--width"
+            class="film__image"
+            src="/src/images/main/desktop/gallery/more-photos-mozjpeg/more-photos-3.jpg"
+            alt="Image description"
           />
-        </picture>
-        <h3 class="main-gallery__description">
-          Створення точної копії на базі сканування reverse engineering
-        </h3>
+          <div class="film-info">
+            <h1 class="film__name">Назва фільму</h1>
+            <p class="film__genre">
+              Жанри фільму<span class="film__release">Рік випуску</span>
+            </p>
+            <div class="film__rating-icon">
+              <span>номер currentpage</span>
+            </div>
+            <!-- <svg class="film__rating-icon">
+          <use href="./img/icons.svg#icon">рейтинг</use>
+        </svg> -->
+          </div>
+        </a>
       </li>
-      <li class="main-gallery__item">
-        <picture class="main-gallery__img">
-          <source
-            srcset="
-              ./images/main/desktop/gallery/gallery-webp/gallary-img-4.webp    1x,
-              ./images/main/desktop/gallery/gallery-webp/gallary-img-4@2x.webp 2x
-            "
-            media="(min-width: 1440px)"
-            type="image/webp"
-          />
-          <source
-            srcset="
-              ./images/main/desktop/gallery/gallery-mozjpeg/gallary-img-4.jpg    1x,
-              ./images/main/desktop/gallery/gallery-mozjpeg/gallary-img-4@2x.jpg 2x
-            "
-            media="(min-width: 1440px)"
-          />
-          <source
-            srcset="
-              ./images/main/tablet/gallery/gallery-webp/gallary-img-4.webp    1x,
-              ./images/main/tablet/gallery/gallery-webp/gallary-img-4@2x.webp 2x
-            "
-            media="(min-width: 768px)"
-            type="image/webp"
-          />
-          <source
-            srcset="
-              ./images/main/tablet/gallery/gallery-mozjpeg/gallary-img-4.jpg    1x,
-              ./images/main/tablet/gallery/gallery-mozjpeg/gallary-img-4@2x.jpg 2x
-            "
-            media="(min-width: 768px)"
-          />
-          <source
-            srcset="
-              ./images/main/mobile/gallery/gallery-webp/gallary-img-4.webp    1x,
-              ./images/main/mobile/gallery/gallery-webp/gallary-img-4@2x.webp 2x
-            "
-            media="(max-width: 767px)"
-            type="image/webp"
-          />
-          <source
-            srcset="
-              ./images/main/mobile/gallery/gallery-mozjpeg/gallary-img-4.jpg    1x,
-              ./images/main/mobile/gallery/gallery-mozjpeg/gallary-img-4@2x.jpg 2x
-            "
-            media="(max-width: 767px)"
-          />
+      <li class="gallery__item">
+        <a
+          href="/src/images/main/desktop/gallery/more-photos-mozjpeg/more-photos-3.jpg"
+          class="film__link"
+        >
           <img
-            src="./images/main/desktop/gallery/gallery-mozjpeg/gallary-img-4.jpg"
-            alt="Створення 3-Д моделі дизайнером на моніторі компьютера"
-            class="main-gallery__img--width"
+            class="film__image"
+            src="/src/images/main/desktop/gallery/more-photos-mozjpeg/more-photos-3.jpg"
+            alt="Image description"
           />
-        </picture>
-        <h3 class="main-gallery__description">
-          Всі цикли 3D проектування, створення фотореалістичних цифрових моделей
-        </h3>
+          <div class="film-info">
+            <h1 class="film__name">Назва фільму</h1>
+            <p class="film__genre">
+              Жанри фільму<span class="film__release">Рік випуску</span>
+            </p>
+            <div class="film__rating-icon">
+              <span>номер currentpage</span>
+            </div>
+            <!-- <svg class="film__rating-icon">
+          <use href="./img/icons.svg#icon">рейтинг</use>
+        </svg> -->
+          </div>
+        </a>
+      </li>
+      <li class="gallery__item">
+        <a
+          href="/src/images/main/desktop/gallery/more-photos-mozjpeg/more-photos-3.jpg"
+          class="film__link"
+        >
+          <img
+            class="film__image"
+            src="/src/images/main/desktop/gallery/more-photos-mozjpeg/more-photos-3.jpg"
+            alt="Image description"
+          />
+          <div class="film-info">
+            <h1 class="film__name">Назва фільму</h1>
+            <p class="film__genre">
+              Жанри фільму<span class="film__release">Рік випуску</span>
+            </p>
+            <div class="film__rating-icon">
+              <span>номер currentpage</span>
+            </div>
+            <!-- <svg class="film__rating-icon">
+          <use href="./img/icons.svg#icon">рейтинг</use>
+        </svg> -->
+          </div>
+        </a>
       </li>
     </ul>
   </div>
 </section>
+
+<!-- `
+<div class="galery__card">
+  <a class="gallery__link" href="${largeImageURL}">
+    <img
+      class="gallery__image"
+      src="${webformatURL}"
+      alt="${tags}"
+      title="${tags}"
+      loading="lazy"
+    />
+    <div class="info">
+      <p class="info__item"><b class="info__item-name">Likes</b>${likes}</p>
+      <p class="info__item"><b class="info__item-name">Views</b>${views}</p>
+      <p class="info__item">
+        <b class="info__item-name">Comments</b>${comments}
+      </p>
+      <p class="info__item">
+        <b class="info__item-name">Downloads</b>${downloads}
+      </p>
+    </div>
+  </a>
+</div>
+`; -->

@@ -6,15 +6,17 @@ $colors: (
   'active-color': #008cef,
   'white': #ffffff,
   'backdrop': rgba(43, 43, 43, 0.8),
-  'icon-color': #cdcdcd,);
+  'icon-color': #cdcdcd,
+);
 
 @function getColor($key) {
-  @return map-get($colors, $key);}
+  @return map-get($colors, $key);
+}
 
-$width-min-allowable: 320px;
-$width-mobile: 480px;
+$width-min-allowable: 280px;
+$width-mobile: 320px;
 $width-tablet: 768px;
-$width-desktop: 1440px;
+$width-desktop: 1280px;
 
 $timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 $duration: 250ms;

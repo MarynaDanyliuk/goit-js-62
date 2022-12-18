@@ -78,3 +78,23 @@
     }, 250);
   }
 })();
+
+`<div class="galery__card">
+    <a class="gallery__link" href="${largeImageURL}">
+    <img class="gallery__image" src="${webformatURL}" alt="${tags}" title="${tags}" loading="lazy" />
+    <div class="info">
+      <p class="info__item">
+        <b class="info__item-name">Likes</b>${likes}
+      </p>
+      <p class="info__item">
+        <b class="info__item-name">Views</b>${views}
+      </p>
+      <p class="info__item">
+        <b class="info__item-name">Comments</b>${comments}
+      </p>
+      <p class="info__item">
+        <b class="info__item-name">Downloads</b>${downloads}
+      </p>
+    </div>
+    </a>
+  </div>`;
